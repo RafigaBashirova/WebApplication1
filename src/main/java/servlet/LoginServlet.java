@@ -8,8 +8,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class LoginServlet extends HttpServlet {
+    private static String CURRENT_NAME = "current_username";
+    private static String CURRENT_SURNAME = "current_surname";
     private static String name_of_user = "name";
-    private static String password = "password";
+    private static String surname_of_user = "surname";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //super.doGet(req, resp);
@@ -22,10 +24,11 @@ public class LoginServlet extends HttpServlet {
         System.out.println("sjfvgavsjdvcajsd");
         //super.doPost(req, resp);
         String name = req.getParameter(LoginServlet.name_of_user);
-        String password = req.getParameter(LoginServlet.password);
+        String surname = req.getParameter(LoginServlet.surname_of_user);
         HttpSession session = req.getSession();
-        session.setAttribute(LoginServlet.name_of_user, name);
-        if(name != null & password != null) {
+        session.setAttribute(LoginServlet.CURRENT_NAME, name);
+        session.setAttribute(LoginServlet.CURRENT_SURNAME, surname);
+        if(name != null & surname != null) {
             resp.sendRedirect("/login/logedIn.jsp");
         }
 

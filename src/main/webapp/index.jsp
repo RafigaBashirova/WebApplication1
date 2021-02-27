@@ -6,7 +6,6 @@
             width: 400px;
             height: 300px;
             margin: 0 auto;
-            margin-top: 100px;
             border-radius: 100px;
             box-shadow: 20px 20px 20px grey;
             background-color: #d8c3de;
@@ -17,24 +16,20 @@
             font-weight: bold;
             font-size: 60px;
             text-align: center;
-            margin-top: 80px;
-        }
-        #holdsForms{
-            border: 1px black;
-            margin: 0 auto;
-            margin-left: 70px;
-            width: 300px;
-        }
-        .forms{
-            font-size: 20px;
-            color: #790b9c;
-            margin-bottom: 10px;
         }
         button{
             background-color: #71247b;
             border-radius: 12px;
             color: white;
-            margin-left: 100px;
+            margin-top: 10px;
+        }
+        #holdsForms{
+            text-align: right;
+            margin-right: 90px;
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 24px;
         }
 
     </style>
@@ -45,19 +40,13 @@
     <p>Welcome</p>
 
     <div id="holdsForms">
-    <form method="POST" action="/login/loginedIn">
-        <div class="forms">
-        Username:
-        <input type="text" id="Lname" name="name" placeholder="username...">
-        </div>
-        <div class="forms">
-        Password:
-        <input type="password" id="Lpassword" name="password" placeholder="password...">
-        </div>
-        <div class="forms">
+        <form method="POST" action="/login/loginedIn">
+            Name:
+            <input type="text" id="Lname" name="name" placeholder="Name..."><br>
+            Surname:
+            <input type="text" id="Lsurname" name="surname" placeholder="Surname..."><br>
             <button type="submit" value="Login">LOGIN</button>
-        </div>
-    </form>
+        </form>
     </div>
 
 </div>
